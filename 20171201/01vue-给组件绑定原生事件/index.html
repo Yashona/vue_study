@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<meta name="renderer" content="webkit"> <!-- 设置浏览器极速核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">  <!-- 设置浏览器兼容模式 -->
+<title>vue--给组件绑定原生事件</title>
+
+</head>
+<body>
+
+<div id="demo">
+	<p>{{total}}</p>
+	<button-counter @click.native = "incrementTotal"></button-counter>
+	<button-counter v-on:increment = "incrementTotal"></button-counter>
+	<button-counter2 v-on:increment = "incrementTotal"></button-counter2>
+</div>
+
+</body>
+<script src="./js/vue.min.js"></script>
+<script src="./js/vue-resource.js"></script>
+<script src="./js/index.js"></script>
+</html>
