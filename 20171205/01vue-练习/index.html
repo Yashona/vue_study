@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<meta name="renderer" content="webkit"> <!-- 设置浏览器极速核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">  <!-- 设置浏览器兼容模式 -->
+<title>vue--使用事件监听 </title>
+
+</head>
+<body>
+
+<div id="demo">
+	<input type="text" v-model="myValue"><br>
+	<input type="checkbox" v-model='myBox' value="apple">
+	<input type="checkbox" v-model='myBox' value="orange">
+	<input type="checkbox" v-model='myBox' value="banana">
+	<br>
+	<input type="radio" v-model='myBoxRa' value="apple">
+	<input type="radio" v-model='myBoxRa' value="orange">
+	<input type="radio" v-model='myBoxRa' value="banana">
+	<br>
+	<select v-model="mySelection">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<br>
+
+	复选框：{{myBox}}  <br>
+	单选框：{{myBoxRa}} <br>
+	下拉框：{{mySelection}} <br>
+	input框：{{myValue}} <br>
+	计算属性：{{myValueWithoutNum}} <br>
+
+	<my-header v-on:header-parent="getchilddata" @header-parent-null="clear"></my-header>
+	
+</div>
+
+</body>
+<script src="./js/vue.min.js"></script>
+<script src="./js/vue-resource.js"></script>
+<script src="./js/index.js"></script>
+</html>
