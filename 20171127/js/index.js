@@ -11,10 +11,14 @@ window.onload = function(){
 		},
 		methods:{
 			add:function(){
-				this.myData.push({
-					name:this.username,
-					age:this.age
-				})
+				if( this.username != '' && this.age != '' ){
+					this.myData.push({
+						name:this.username,
+						age:this.age
+					})
+				}else{
+					alert('用户名或年龄不能为空！')
+				}
 				this.username='';
 				this.age='';
 			},
